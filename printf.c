@@ -27,6 +27,7 @@ int _printf(const char *format, ...)
 				n = _strlen(p);
 				write(1, p, n);
 				format++;
+				n--;
 				break;
 			case 'c':
 				c = va_arg(params, int);
