@@ -1,4 +1,6 @@
 #include "main.h"
+#include<unistd.h>
+#include<stdarg.h>
 /**
  * _printf - print out formated string
  * @format: string to format
@@ -12,7 +14,7 @@ int _printf(const char *format, ...)
 
 	va_list params;
 
-	N = 0;
+	N = 0, n = 0;
 	va_start(params, format);
 	while (*format)
 	{
@@ -42,5 +44,5 @@ int _printf(const char *format, ...)
 		N++;
 	}
 	va_end(params);
-	return (0);
+	return (n + N);
 }
