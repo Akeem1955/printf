@@ -15,6 +15,10 @@ int _printf(const char *format, ...)
 	va_list params;
 
 	N = 0, n = 0;
+	if (!(*format))
+	{
+		return (-1);
+	}
 	va_start(params, format);
 	while (*format)
 	{
