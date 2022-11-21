@@ -28,6 +28,7 @@ int _printf(const char *format, ...)
 				write(1, p, n);
 				format++;
 				n--;
+				N += n;
 				break;
 			case 'c':
 				c = va_arg(params, int);
@@ -45,5 +46,5 @@ int _printf(const char *format, ...)
 		N++;
 	}
 	va_end(params);
-	return (n + N);
+	return (N);
 }
