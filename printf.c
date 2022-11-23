@@ -32,6 +32,10 @@ int _printf(const char *format, ...)
 				printed_chars += print_char(arg_list);
 				format++;
 				break;
+			case '%':
+				printed_chars += _putchar(*(format + 1));
+				format++;
+				break;
 			default:
 				printed_chars--;
 				break;
