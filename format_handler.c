@@ -12,9 +12,8 @@ int print_string(va_list str)
 
 	p = va_arg(str, char*);
 
-	if (!(*p))
+	if (!(p))
 	{
-		p = "(null)";
 		return (-1);
 	}
 	for (i = 0; *(p + i); i++)
