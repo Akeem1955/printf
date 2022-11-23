@@ -37,7 +37,10 @@ int _printf(const char *format, ...)
 				format++;
 				break;
 			default:
-				printed_chars--;
+				printed_chars += _putchar(*(format));
+				printed_chars += _putchar(*(format + 1));
+				format++;
+				
 				break;
 			}
 		} else

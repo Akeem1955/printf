@@ -14,7 +14,7 @@ int print_string(va_list str)
 
 	if (!(p))
 	{
-		return (-1);
+		p = "(null)";
 	}
 	for (i = 0; *(p + i); i++)
 	{
