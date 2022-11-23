@@ -36,6 +36,9 @@ int _printf(const char *format, ...)
 				printed_chars += _putchar(*(format + 1));
 				format++;
 				break;
+			case '\0':
+				return (printed_chars);
+				break;
 			default:
 				printed_chars += _putchar(*(format));
 				printed_chars += _putchar(*(format + 1));
