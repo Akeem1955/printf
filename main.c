@@ -12,9 +12,9 @@ int main(void)
     int len;
     int len2;
 
-    len = _printf("%");
-    len2 = printf("\nlets try to printf");
-    printf("%d:%d",len,len2);
+    len = _printf("%c", '\0');
+    len2 = printf("%c", '\0');
+    printf("\n%d:%d",len,len2);
     printf("----------------------------------------");
     return (0);
 }
