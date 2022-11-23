@@ -12,7 +12,7 @@ int main(void)
     int len;
     int len2;
 
-    len = _printf("lets %s %s try %s to printf %s", "am" ,"a", "clonwn");
+    len = _printf(NULL);
     len2 = printf("lets try to printf");
     printf("%d:%d",len,len2);
     printf("----------------------------------------");

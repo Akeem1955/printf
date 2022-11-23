@@ -11,7 +11,7 @@ int _printf(const char *format, ...)
 	int printed_chars;
 
 	printed_chars = 0;
-	if (!(*format))
+	if (!(format))
 	{
 		return (-1);
 	}
