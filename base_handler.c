@@ -1,26 +1,21 @@
 #include "main.h"
 /**
- * handle_base - print out formated string
- * @handle_base:string to be formated
+ * print_binary - print out formated string
+ * @num:string to be formated
  * Return: the length of the printed words
  */
 int print_binary(va_list num)
 {
-    int printed_chars, base;
+	int printed_chars, base;
 
-    base = va_arg(num, int); /*va_arg(num, int);*/
-    if (base < 0)
-    {
-        return (-1);
-    }
-    printed_chars = baseHelper(base, 2);
-
-    return (printed_chars);
+	base = va_arg(num, int); /*va_arg(num, int);*/
+	if (base < 0)
+	{
+		return (-1);
+	}
+	printed_chars = baseHelper(base, 2);
+	return (printed_chars);
 }
-
-
-
-
 
 /**
  * print_hex - Prints a representation of a decimal number on base16 lowercase
@@ -30,16 +25,15 @@ int print_binary(va_list num)
 
 int print_hex(va_list list)
 {
-    int num, len;
+	int num, len;
 
-    num = (va_arg(list, int));
-    if (num < 0)
-    {
-        return (-1);
-    }
-
-    len = hex_help(num);
-    return (len);
+	num = (va_arg(list, int));
+	if (num < 0)
+	{
+		return (-1);
+	}
+	len = hex_help(num);
+	return (len);
 }
 
 /**
@@ -48,16 +42,17 @@ int print_hex(va_list list)
  * Return: Number of characters printed
  */
 
-int print_heX(va_list list){
-    int num, len;
-    num = (va_arg(list, int));
-    if (num < 0)
-    {
-        return (-1);
-    }
+int print_heX(va_list list)
+{
+	int num, len;
 
-    len = hex_help(num);
-    return (len);
+	num = (va_arg(list, int));
+	if (num < 0)
+	{
+		return (-1);
+	}
+	len = hex_help(num);
+	return (len);
 }
 
 /**
@@ -68,14 +63,13 @@ int print_heX(va_list list){
 
 int print_octal(va_list list)
 {
-    int printed_chars, base;
+	int printed_chars, base;
 
-    base = va_arg(list, int);
-    if (base < 0)
-    {
-        return (-1);
-    }
-    printed_chars = baseHelper(base, 8);
-
-    return (printed_chars);
+	base = va_arg(list, int);
+	if (base < 0)
+	{
+		return (-1);
+	}
+	printed_chars = baseHelper(base, 8);
+	return (printed_chars);
 }

@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_string - print a string
- * @str: str to print
+ * @list: str to print
  * Return:length of str
  */
 
@@ -25,7 +25,7 @@ int print_string(va_list list)
 
 /**
  * print_char - print a char
- * @str:char to be printed
+ * @list:char to be printed
  * Return:1
  */
 
@@ -35,8 +35,9 @@ int print_char(va_list list)
 	return (1);
 }
 /**
- * print_char - print a char
- * @str:char to be printed
+ * print_percent - print a char
+ * @format:char to be printed
+ * @n:check for true
  * Return:1
  */
 int print_percent(const char *format, int n)
