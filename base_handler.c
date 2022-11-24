@@ -4,14 +4,13 @@
  * @handle_base:string to be formated
  * Return: the length of the printed words
  */
-int print_binary(int num)
+int print_binary(va_list num)
 {
     int printed_chars, base;
 
-    base = num; /*va_arg(num, int);*/
+    base = va_arg(num, int); /*va_arg(num, int);*/
     if (base < 0)
     {
-        _putchar('*');
         return (-1);
     }
     printed_chars = baseHelper(base, 2);

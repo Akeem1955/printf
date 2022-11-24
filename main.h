@@ -22,7 +22,7 @@ int handle_base(va_list base);
 int print_octal(va_list list);
 int print_heX(va_list list);
 int print_hex(va_list list);
-int print_binary(int num);
+int print_binary(va_list num);
 int baseHelper(int base, int mod);
 int heX_help(int base);
 int hex_help(int base);

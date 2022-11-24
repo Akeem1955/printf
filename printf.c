@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{'d',print_num},
 		{'i',print_num},
 		{'u',print_unum},
+		{'b',print_binary},
 		{'\0', (void *)0}
 	};
 	if (!(format))
