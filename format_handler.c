@@ -1,16 +1,17 @@
 #include "main.h"
+#include<stdio.h>
 /**
  * print_string - print a string
  * @str: str to print
  * Return:length of str
  */
 
-int print_string(va_list str)
+int print_string(va_list list)
 {
 	int i;
 	char *p;
 
-	p = va_arg(str, char*);
+	p = va_arg(list, char*);
 
 	if (!(p))
 	{
@@ -29,10 +30,29 @@ int print_string(va_list str)
  * Return:1
  */
 
-int print_char(va_list str)
+int print_char(va_list list)
 {
-	_putchar(va_arg(str, int));
+	_putchar(va_arg(list, int));
 	return (1);
 }
+/**
+ * print_char - print a char
+ * @str:char to be printed
+ * Return:1
+ */
+int print_percent(const char *format, int n)
+{
+	if (n == 0)
+	{
+		_putchar(*format);
+	} else
+	{
+		_putchar(*format);
+		_putchar(*(format + 1));
+		return (2);
+	}
+	return (1);
+}
+
 
 

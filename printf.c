@@ -9,8 +9,14 @@ int _printf(const char *format, ...)
 {
 	va_list arg_list;
 	int printed_chars;
-
-	printed_chars = 0;
+	Format_map format_map[] = {
+		{'c',print_char},
+		{'s',print_string},
+		{'d',print_num},
+		{'i',print_num},
+		{'u',print_unum},
+		{'\0', (void *)0}
+	};
 	if (!(format))
 	{
 		return (-1);
@@ -18,39 +24,7 @@ int _printf(const char *format, ...)
 	va_start(arg_list, format);
 	/* start formatting string */
 
-	while (*format)
-	{
-		if (*format == '%')
-		{
-			switch (*(format + 1))
-			{
-			case 's':
-				printed_chars += print_string(arg_list);
-				format++;
-				break;
-			case 'c':
-				printed_chars += print_char(arg_list);
-				format++;
-				break;
-			case '%':
-				printed_chars += _putchar(*(format + 1));
-				format++;
-				break;
-			case '\0':
-				return (-1);
-			default:
-				printed_chars += _putchar(*(format));
-				printed_chars += _putchar(*(format + 1));
-				format++;
-				
-				break;
-			}
-		} else
-		{
-			printed_chars += _putchar(*format);
-		}
-
-		format++;
-	}
+	printed_chars = (handle_print(format, arg_list, format_map));
+	va_end(arg_list);
 	return (printed_chars);
 }
