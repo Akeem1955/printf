@@ -77,7 +77,7 @@ int print_heX(va_list list){
         return (-1);
     }
 
-    hex_help(num);
+    len = hex_help(num);
     return (len);
 }
 
@@ -121,7 +121,7 @@ int heX_help(int base)
 {
     int len;
 
-     if (base <= 1)
+    if (base <= 1)
     {
         _putchar(base + '0');
         return (1);
