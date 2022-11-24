@@ -1,5 +1,4 @@
 #include "main.h"
-#include<stdio.h>
 /**
  * handle_print - print out formated string
  * @format:string to be formated
