@@ -33,7 +33,7 @@ int handle_print(const char *format, va_list placeholder_list, Format_map map[])
                 }
 
             }
-            if (map[i].specifier == '\0' && (format + 1) != '\0')
+            if (map[i].specifier == '\0' && *(format + 1) != '\0')
             {
                 printed_chars += *(format + 1) == '%' ? print_percent((format + 1), 0) : print_percent((format), 1);
             }
