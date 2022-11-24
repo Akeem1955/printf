@@ -16,6 +16,9 @@ int _printf(const char *format, ...)
 		{'i',print_num},
 		{'u',print_unum},
 		{'b',print_binary},
+		{'o',print_octal},
+		{'x',print_hex},
+		{'X',print_heX},
 		{'\0', (void *)0}
 	};
 	if (!(format))
