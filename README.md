@@ -38,4 +38,10 @@ format is a character string.
 Handle the following custom conversion specifier:
 
 * S : prints the string.
-* Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
+* Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x, followed by the ASCII code value in hexadecimal (upper case - always 2 characters) 
+
+Handle the following flag characters for non-custom conversion specifiers:
+
+* +
+* space
+* #
