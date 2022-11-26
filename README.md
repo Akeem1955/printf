@@ -56,3 +56,15 @@ Handle the field width for non-custom conversion specifiers.
 
 Handle the precision for non-custom conversion specifiers.
 Handle the 0 flag character for non-custom conversion specifiers.
+
+Handle the - flag character for non-custom conversion specifiers.
+
+Handle the following custom conversion specifier:
+
+* r : prints the reversed string
+
+Handle the following custom conversion specifier:
+
+* R: prints the rot13'ed string
+
+
