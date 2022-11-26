@@ -22,6 +22,10 @@ format is a character string.
 
 * d
 * i
+* u
+* o
+* x
+* X
 *You don’t have to handle the flag characters
 *You don’t have to handle field width
 *You don’t have to handle precision
