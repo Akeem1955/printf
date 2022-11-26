@@ -22,7 +22,9 @@ format is a character string.
 
 * d
 * i
-You don’t have to handle the flag characters
-You don’t have to handle field width
-You don’t have to handle precision
-You don’t have to handle the length modifiers
+*You don’t have to handle the flag characters
+*You don’t have to handle field width
+*You don’t have to handle precision
+*You don’t have to handle the length modifiers
+
+* b: the unsigned int argument is converted to binary
